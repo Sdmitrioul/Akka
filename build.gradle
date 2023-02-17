@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.itmo'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.json:json:20220924'
+    implementation 'org.slf4j:slf4j-api:2.0.0'
+    implementation 'ch.qos.logback:logback-classic:1.4.0'
+    implementation "com.typesafe.akka:akka-actor_2.11:2.4.17"
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
