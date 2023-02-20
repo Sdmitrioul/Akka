@@ -25,7 +25,7 @@ public class Main {
             while (true) {
                 final String value = reader.readLine();
                 
-                ActorRef master = system.actorOf(Props.create(MasterActor.class));
+                ActorRef master = system.actorOf(Props.create(MasterActor.class, 10L));
     
                 Object response = ask(master, value, Timeout.apply(10, TimeUnit.SECONDS))
                         .toCompletableFuture()
